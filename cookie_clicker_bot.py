@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-
 chromePath = 'C:\Windows\WinSxS\x86_netfx4-browser_files_b03f5f7f11d50a3a_4.0.15912.0_none_06d55e201f3d4256\chrome.browser'
 broserDriver = Service(chromePath)
 page = webdriver.Chrome(service=broserDriver)
@@ -24,6 +23,9 @@ action.perform()
 for x in range(100000):
     page.find_element(By.XPATH, '//*[@id="bigCookie"]').click()
     cookies = (page.find_element(By.ID, 'cookies').text).split(' ')
-    price = page.find_element(By.XPATH, '//*[@id="productPrice0"]').text
-    if int(cookies[0]) >= int(price):
+    cursor_price = int(page.find_element(By.XPATH, '//*[@id="productPrice0"]').text)
+    grandma_price = int(page.find_element(By.XPATH, '//*[@id="productPrice1"]').text)
+    if int(cookies[0]) >= grandma_price:
+        page.find_element(By.XPATH, '//*[@id="product1"]').click()
+    if int(cookies[0]) >= cursor_price:
         page.find_element(By.XPATH, '//*[@id="product0"]').click()
