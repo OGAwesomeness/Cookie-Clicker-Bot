@@ -26,21 +26,21 @@ def main():
         page.find_element(By.XPATH, '//*[@id="bigCookie"]').click()
         cookies = (page.find_element(By.ID, 'cookies').text).split(' ')
         
-        # you(page, cookies)
-        # cortext_baker(page, cookies)
-        # idleverse(page, cookies)
-        # javascript_console(page, cookies)
-        # chancemaker(page, cookies)
-        # chancemaker(page, cookies)
-        # prism(page, cookies)
-        # anti_condenser(page, cookies)
-        # time_machine(page, cookies)
-        # portal(page, cookies)
-        # alchemy(page, cookies)
-        # shipment(page, cookies)
-        # wizard_tower(page, cookies)
-        # temple(page, cookies)
-        # bank(page, cookies)
+        you(page, cookies)
+        cortext_baker(page, cookies)
+        idleverse(page, cookies)
+        javascript_console(page, cookies)
+        chancemaker(page, cookies)
+        chancemaker(page, cookies)
+        prism(page, cookies)
+        anti_condenser(page, cookies)
+        time_machine(page, cookies)
+        portal(page, cookies)
+        alchemy(page, cookies)
+        shipment(page, cookies)
+        wizard_tower(page, cookies)
+        temple(page, cookies)
+        bank(page, cookies)
         factory(page, cookies)
         mine(page, cookies)
         farm(page, cookies)
@@ -52,7 +52,7 @@ def cursor(page, cookies):
     price = page.find_element(By.XPATH, '//*[@id="productPrice0"]')
     product = page.find_element(By.XPATH, '//*[@id="product0"]').get_attribute('class')
     if product == 'product unlocked enabled':
-        if int(cookies[0]) >= int(price.text):
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
             page.find_element(By.XPATH, '//*[@id="product0"]').click()
 
 
@@ -60,7 +60,7 @@ def grandma(page, cookies):
     price = page.find_element(By.XPATH, '//*[@id="productPrice1"]')
     product = page.find_element(By.XPATH, '//*[@id="product1"]').get_attribute('class')
     if product == 'product unlocked enabled':
-        if int(cookies[0]) >= int(price.text):
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
             page.find_element(By.XPATH, '//*[@id="product1"]').click()
         
         
@@ -68,7 +68,7 @@ def farm(page, cookies):
     price = page.find_element(By.XPATH, "//*[@id='productPrice2']")
     product = page.find_element(By.XPATH, '//*[@id="product2"]').get_attribute('class')
     if product == 'product unlocked enabled':
-        if int(cookies) >= int(price.text):
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
             page.find_element(By.XPATH, '//*[@id="product2"]').click()
         
         
@@ -76,7 +76,7 @@ def mine(page, cookies):
     price = page.find_element(By.XPATH, "//*[@id='productPrice3']")
     product = page.find_element(By.XPATH, '//*[@id="product3"]').get_attribute('class')
     if product == 'product unlocked enabled':
-        if int(cookies) >= int(price.text):
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
             page.find_element(By.XPATH, '//*[@id="product3"]').click()
         
         
@@ -84,120 +84,120 @@ def factory(page, cookies):
     price = page.find_element(By.XPATH, "//*[@id='productPrice4']")
     product = page.find_element(By.XPATH, "//*[@id='product4']").get_attribute('class')
     if product == 'product unlocked enabled':
-        if int(cookies) >= int(price.text):
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
             page.find_element(By.XPATH, '//*[@id="product4"]').click()
         
         
-# def bank(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice5']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product5"]').click()
+def bank(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice5']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product5"]').click()
         
         
-# def temple(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice6']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product6"]').click()
+def temple(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice6']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product6"]').click()
         
         
-# def wizard_tower(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice7']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product7"]').click()
+def wizard_tower(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice7']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product7"]').click()
         
         
-# def shipment(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice8']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product8"]').click()
+def shipment(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice8']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product8"]').click()
         
         
-# def alchemy(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice9']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product9"]').click()
+def alchemy(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice9']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product9"]').click()
         
         
-# def portal(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice10']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product10"]').click()
+def portal(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice10']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product10"]').click()
         
         
-# def time_machine(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice11']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product11"]').click()
+def time_machine(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice11']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product11"]').click()
         
         
-# def anti_condenser(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice12']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product12"]').click()
+def anti_condenser(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice12']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product12"]').click()
         
         
-# def prism(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice13']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product13"]').click()
+def prism(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice13']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product13"]').click()
         
         
-# def chancemaker(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice14']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product14"]').click()
+def chancemaker(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice14']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product14"]').click()
         
         
-# def javascript_console(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice15']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product15"]').click()
+def javascript_console(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice15']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product15"]').click()
         
         
-# def idleverse(page, cookies):
-#     price = int(page.find_element(By.XPATH, "//*[@id='productPrice16']").text)
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= price:
-#             page.find_element(By.XPATH, '//*[@id="product16"]').click()
+def idleverse(page, cookies):
+    price = int(page.find_element(By.XPATH, "//*[@id='productPrice16']").text)
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product16"]').click()
         
         
-# def cortext_baker(page, cookies):
-#     price = page.find_element(By.XPATH, "//*[@id='productPrice17']")
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= int(price):
-#             page.find_element(By.XPATH, '//*[@id="product17"]').click()
+def cortext_baker(page, cookies):
+    price = page.find_element(By.XPATH, "//*[@id='productPrice17']")
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product17"]').click()
         
         
-# def you(page, cookies):
-#     price = page.find_element(By.XPATH, "//*[@id='productPrice18']")
-#     product = price.get_attribute('class')
-#     if product == 'product unlocked enabled':
-#         if int(cookies) >= int(price):
-#             page.find_element(By.XPATH, '//*[@id="product18"]').click()
+def you(page, cookies):
+    price = page.find_element(By.XPATH, "//*[@id='productPrice18']")
+    product = price.get_attribute('class')
+    if product == 'product unlocked enabled':
+        if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
+            page.find_element(By.XPATH, '//*[@id="product18"]').click()
     
     
 main()
