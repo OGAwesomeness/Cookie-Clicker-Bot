@@ -26,6 +26,7 @@ def main():
         page.find_element(By.XPATH, '//*[@id="bigCookie"]').click()
         cookies = (page.find_element(By.ID, 'cookies').text).split(' ')
         
+        upgrades(page)
         you(page, cookies)
         cortext_baker(page, cookies)
         idleverse(page, cookies)
@@ -198,6 +199,10 @@ def you(page, cookies):
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
             page.find_element(By.XPATH, '//*[@id="product18"]').click()
+
+
+def upgrades():
+    pass
     
     
 main()
