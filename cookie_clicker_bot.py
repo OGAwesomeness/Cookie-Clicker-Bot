@@ -26,7 +26,6 @@ def main():
         page.find_element(By.XPATH, '//*[@id="bigCookie"]').click()
         cookies = (page.find_element(By.ID, 'cookies').text).split(' ')
         
-        upgrades(page)
         you(page, cookies)
         cortext_baker(page, cookies)
         idleverse(page, cookies)
