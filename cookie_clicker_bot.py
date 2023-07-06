@@ -89,7 +89,7 @@ def factory(page, cookies):
         
         
 def bank(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice5']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice5']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -97,7 +97,7 @@ def bank(page, cookies):
         
         
 def temple(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice6']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice6']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -105,7 +105,7 @@ def temple(page, cookies):
         
         
 def wizard_tower(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice7']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice7']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -113,7 +113,7 @@ def wizard_tower(page, cookies):
         
         
 def shipment(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice8']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice8']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -121,7 +121,7 @@ def shipment(page, cookies):
         
         
 def alchemy(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice9']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice9']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -129,7 +129,7 @@ def alchemy(page, cookies):
         
         
 def portal(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice10']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice10']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -137,7 +137,7 @@ def portal(page, cookies):
         
         
 def time_machine(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice11']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice11']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -145,7 +145,7 @@ def time_machine(page, cookies):
         
         
 def anti_condenser(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice12']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice12']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -153,7 +153,7 @@ def anti_condenser(page, cookies):
         
         
 def prism(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice13']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice13']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -161,7 +161,7 @@ def prism(page, cookies):
         
         
 def chancemaker(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice14']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice14']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -169,7 +169,7 @@ def chancemaker(page, cookies):
         
         
 def javascript_console(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice15']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice15']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
@@ -177,7 +177,7 @@ def javascript_console(page, cookies):
         
         
 def idleverse(page, cookies):
-    price = int(page.find_element(By.XPATH, "//*[@id='productPrice16']").text)
+    price = page.find_element(By.XPATH, "//*[@id='productPrice16']")
     product = price.get_attribute('class')
     if product == 'product unlocked enabled':
         if int(cookies[0].replace(',','')) >= int(price.text.replace(',', '')) or price.text in ' '.join(cookies):
